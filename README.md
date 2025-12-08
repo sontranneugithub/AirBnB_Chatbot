@@ -91,31 +91,29 @@ You can modify the cells near the end of the `agent.ipynb` file to test custom q
 ## Repository Structure
 
 AirBnB_Chatbot/
-│
 ├── data/
-│   └── AB_NYC_2019.csv                  # The primary dataset used by the agent.
+│   └── AB_NYC_2019.csv                 # The dataset used for the agent.
 │
 ├── notebook/
-│   ├── agent.ipynb                      # Initial draft or experimental notebook.
-│   ├── exploration.ipynb                # Main workflow notebook for project execution, testing, and logging.
-│   └── prompts.db                       # Local SQLite DB used during notebook experiments.
+│   ├── agent.ipynb                     # Initial draft.
+│   ├── exploration.ipynb               # Main workflow notebook for project execution, testing, and logging.
+│   └── prompts.db                      # Local SQLite DB used during notebook experiments.
 │
 ├── results/
 │   └── logs/
-│       └── agent_run_log_YYYYMMDD_HHMMSS.json   
-│                                          # Time-stamped JSON log file containing structured agent interactions.
+│       └── agent_run_log_YYYYMMDD_HHMMSS.json
+│                                        # Time-stamped JSON logs of agent interactions.
 │
-├── src/                                  # Source Code Directory
-│   ├── __pycache__/                      # Bytecode cache for src modules
-│   ├── data_processing.py                # Handles data loading, cleaning, and PromptDB initialization.
-│   ├── evaluate.py                       # Contains query parsing, filtering logic, and statistical summary functions.
-│   ├── prompts.db                        # Main SQLite DB of prompt templates used by the chatbot.
-│   └── train.py                          # Core execution logic for AirbnbAgent, 
-│                                          # LanguageModel wrapper, TF-IDF search engine, and log recorder.
+├── src/                                # Source Code Directory
+│   ├── __pycache__/                    # Bytecode cache for src modules
+│   ├── data_processing.py              # Handles data loading, cleaning, and PromptDB initialization.
+│   ├── evaluate.py                     # Query parsing, filtering logic, and statistical summary functions.
+│   ├── prompts.db                      # Main SQLite DB containing prompt templates for the chatbot.
+│   └── train.py                        # Core logic: AirbnbAgent, LanguageModel, TF-IDF search, and LogRecorder.
 │
-├── agent.py                              # (Old monolithic script — now replaced by modular src/ version)
+├── agent.py                            # Old monolithic script — now replaced by modular src/ version.
 │
-├── environment.yml                       # Conda environment file listing all project dependencies.
+├── environment.yml                     # Conda environment file listing all project dependencies.
 │
-└── README.md                             # This documentation file.
+└── README.md                           # This documentation file.
 

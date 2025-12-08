@@ -90,9 +90,19 @@ You can modify the cells near the end of the `agent.ipynb` file to test custom q
 
 ## Repository Structure
 
-project-name/
-├── README.md                 
-├── agent.ipynb   
-├── prompts.db          
-└── AB_NYC_2019.csv     
-
+/AirBnB_Chatbot/
+├── data/
+│   └── AB_NYC_2019.csv               
+├── notebook/
+│   ├── agent.ipynb                   # draft_log
+│   └── exploration.ipynb             # Main workflow notebook 
+├── results/
+│   └── logs/
+│       └── agent_run_log_YYYYMMDD_HHMMSS.json # JSON log file
+├── src/                              # Source Code
+│   ├── data_processing.py            # Loads data, cleans it, initializes PromptDB
+│   ├── evaluate.py                   # Contains query parsing and statistical functions
+│   ├── train.py                      # Contains AirbnbAgent, LanguageModel, TfidfSearch, and LogRecorder
+|   └── prompts.db                    # SQLite database for LLM prompt
+├── environment.yml                   # Anaconda environment dependencies (for reproducibility)
+└── README.md

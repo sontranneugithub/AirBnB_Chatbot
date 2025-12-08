@@ -101,8 +101,7 @@ AirBnB_Chatbot/
 │
 ├── results/
 │   └── logs/
-│       └── agent_run_log_YYYYMMDD_HHMMSS.json
-│                                        # Time-stamped JSON logs of agent interactions.
+│       └── agent_run_log_YYYYMMDD_HHMMSS.json # Time-stamped JSON logs of agent interactions.
 │
 ├── src/                                # Source Code Directory
 │   ├── __pycache__/                    # Bytecode cache for src modules

@@ -91,19 +91,31 @@ You can modify the cells near the end of the `agent.ipynb` file to test custom q
 ## Repository Structure
 
 /AirBnB_Chatbot/
-
+│
 ├── data/
-│   └── AB_NYC_2019.csv               
+│   └── AB_NYC_2019.csv                  # The primary dataset used by the agent.
+│
 ├── notebook/
-│   ├── agent.ipynb                   # draft_log
-│   └── exploration.ipynb             # Main workflow notebook 
+│   ├── agent.ipynb                      # Initial draft or experimental notebook.
+│   ├── exploration.ipynb                # Main workflow notebook for project execution, testing, and logging.
+│   └── prompts.db                       # Local SQLite DB used during notebook experiments.
+│
 ├── results/
 │   └── logs/
-│       └── agent_run_log_YYYYMMDD_HHMMSS.json # JSON log file
-├── src/                              # Source Code
-│   ├── data_processing.py            # Loads data, cleans it, initializes PromptDB
-│   ├── evaluate.py                   # Contains query parsing and statistical functions
-│   ├── train.py                      # Contains AirbnbAgent, LanguageModel, TfidfSearch, and LogRecorder
-|   └── prompts.db                    # SQLite database for LLM prompt
-├── environment.yml                   # Anaconda environment dependencies (for reproducibility)
-└── README.md
+│       └── agent_run_log_YYYYMMDD_HHMMSS.json   
+│                                          # Time-stamped JSON log file containing structured agent interactions.
+│
+├── src/                                  # Source Code Directory
+│   ├── __pycache__/                      # Bytecode cache for src modules
+│   ├── data_processing.py                # Handles data loading, cleaning, and PromptDB initialization.
+│   ├── evaluate.py                       # Contains query parsing, filtering logic, and statistical summary functions.
+│   ├── prompts.db                        # Main SQLite DB of prompt templates used by the chatbot.
+│   └── train.py                          # Core execution logic for AirbnbAgent, 
+│                                          # LanguageModel wrapper, TF-IDF search engine, and log recorder.
+│
+├── agent.py                              # (Old monolithic script — now replaced by modular src/ version)
+│
+├── environment.yml                       # Conda environment file listing all project dependencies.
+│
+└── README.md                             # This documentation file.
+

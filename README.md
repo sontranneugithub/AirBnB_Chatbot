@@ -111,8 +111,6 @@ AirBnB_Chatbot/
 │   ├── prompts.db                      # Main SQLite DB containing chatbot prompt templates.
 │   └── train.py                        # Core logic: AirbnbAgent, LanguageModel, TF-IDF search, logging.
 │
-├── agent.py                            # Old monolithic script (deprecated; replaced by src/ modules)
-│
 ├── environment.yml                     # Conda environment listing all project dependencies.
 │
 └── README.md                           # Project documentation.

@@ -88,7 +88,7 @@ You can modify the cells near the end of the `agent.ipynb` file to test custom q
 | **High Demand** | "What neighborhoods are high in demand?" |
 ---
 
-## Repository Structure
+## Repository Structur
 
 ```
 AirBnB_Chatbot/
